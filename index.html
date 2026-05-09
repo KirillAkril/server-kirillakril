@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="Logo_Polytech_rus_main.jpg" alt="Логотип" class="logo">
+        <h1>Форма обратной связи Демченко Кирилл 251-3210</h1>
+    </header>
+
+    <main>
+
+        <form action="https://httpbin.org/post" method="POST">
+
+            <label for="name">Имя пользователя</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail пользователя</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="type">Тип обращения</label>
+            <select id="type" name="type">
+
+                <option value="complaint">
+                    Жалоба
+                </option>
+
+                <option value="suggestion">
+                    Предложение
+                </option>
+
+                <option value="thanks">
+                    Благодарность
+                </option>
+
+            </select>
+
+            <label for="message">Текст обращения</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required>
+            </textarea>
+
+            <label>Вариант ответа</label>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox" name="reply_sms">
+                    SMS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="reply_email">
+                    E-mail
+                </label>
+
+            </div>
+
+            <button type="submit">
+                Отправить
+            </button>
+
+        </form>
+
+        <a href="headers.php" class="link-button">
+            Перейти на 2 страницу
+        </a>
+
+    </main>
+
+    <footer>
+        Задание для самостоятельной работы
+    </footer>
+
+</body>
+</html>
