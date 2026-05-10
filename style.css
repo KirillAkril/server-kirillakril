@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f5f5f5;
+
+}
+
+/* хедер */
+
+header {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: white;
+
+    color: black;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.logo {
+
+    position: absolute;
+
+    left: 20px;
+
+    width: 270px;
+
+    height: auto;
+
+}
+
+header h1 {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+}
+
+/* мейн */
+
+main {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+}
+
+/* калькулятор */
+
+.calculator {
+
+    width: 100%;
+    max-width: 500px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* поле ввода */
+
+#display {
+
+    width: 100%;
+
+    height: 70px;
+
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 28px;
+
+    background-color: #fafafa;
+
+}
+
+/* результат */
+
+.result {
+
+    min-height: 40px;
+
+    margin-bottom: 20px;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    background-color: #f0f0f0;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: black;
+
+}
+
+/* кнопки */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+}
+
+/* сами кнопки */
+
+button {
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: gray;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+button:hover {
+
+    background-color: #5f5f5f;
+
+    transform: scale(1.03);
+
+}
+
+/* футер */
+
+footer {
+
+    background-color: gray;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 18px;
+
+}
+
+/* кнопка равно */
+
+button[type="submit"] {
+
+    grid-column: span 3;
+
+    background-color: #4f4f4f;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
