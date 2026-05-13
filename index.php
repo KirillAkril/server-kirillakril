@@ -1,7 +1,7 @@
 <?php
 
 $result = "";
-
+include 'trig.php';
 // получаем выражение из post запроса
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // разрешенные символы
     if (
         preg_match(
-            '/^[0-9+\-*\/().,!^ elogpinsqrt]+$/',
+            '/^[0-9+\-*\/().,!^ elogpinsqrtcosta]+$/',
             $expression
         )
     ) {
@@ -271,6 +271,19 @@ function calculate($expression) {
 
         },
         $expression
+    );
+    // sin cos tan
+    $expression = preg_replace_callback(
+    '/(sin|cos|tan)\(([^()]+)\)/',
+    function($matches) {
+
+        return trig(
+            $matches[1],
+            $matches[2]
+        );
+
+    },
+    $expression
     );
 
     // степень
