@@ -26,9 +26,7 @@
     Главная
         </a>
 
-        <a href="/?route=products">
-            Товары
-        </a>
+
 
         <a href="/?route=calculator">
             Калькулятор
